@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html {% if site.language %} lang="{{ site.language }}" {% endif %}>
   {% include head.html %}
 
   <body>
 
     {% include header.html %}
 
-    {{ content }}
+      {{ content }}
 
     {% include footer.html %}
 
