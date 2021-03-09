@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss",
+		"_sass/variables.scss",
+		"_sass/base.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables\";\n@import \"base\";",
+		"$color-primary:                 #222;\n$color-secondary:               #222;\n$color-tertiary:                #222;\n$white:                         #fff;",
+		"html, \nbody {\n  padding: 0; \n  margin: 0;\n}\n\nbody {\n  font-family: 'roboto';\n  background: $color-primary;\n  color: $white;\n}"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,IAAI,CACJ,IAAI,AAAC,CACH,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACV,AAED,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,QAAQ,CACrB,UAAU,CDRoB,IAAI,CCSlC,KAAK,CDNyB,IAAI,CCOnC"
+}
