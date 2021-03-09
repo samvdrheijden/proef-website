@@ -4,13 +4,15 @@
 	"sources": [
 		"style.scss",
 		"_sass/variables.scss",
-		"_sass/base.scss"
+		"_sass/base.scss",
+		"_sass/typography.scss"
 	],
 	"sourcesContent": [
-		"@import \"variables\";\n@import \"base\";",
-		"$color-primary:                 #222;\n$color-secondary:               #222;\n$color-tertiary:                #222;\n$white:                         #fff;",
-		"html, \nbody {\n  padding: 0; \n  margin: 0;\n}\n\nbody {\n  font-family: 'roboto';\n  background: $color-primary;\n  color: $white;\n}"
+		"@import \"variables\";\n@import \"base\";\n@import \"typography\";",
+		"$color-primary:                 #397D81;\n$color-secondary:               #222;\n$color-tertiary:                #222;\n$white:                         #fff;\n$black:                         #000;\n\n$darker-gray:                   #111;\n$dark-gray:                     #222; \n$gray:                          #444; \n$light-gray:                    #666;\n$lighter-gray:                  #d6d6d6;\n\n$link-color:                    $color-primary;\n\n\n$font-family-sans-serif:          'roboto';\n$font-family-serif:               'Times New Roman';",
+		"html, \nbody {\n  padding: 0; \n  margin: 0;\n}\n\nbody {\n  background: $color-primary;\n  color: $white;\n}",
+		"\nbody {\n  font-family: $font-family-sans-serif;\n}"
 	],
 	"names": [],
-	"mappings": "AEAA,AAAA,IAAI,CACJ,IAAI,AAAC,CACH,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACV,AAED,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,QAAQ,CACrB,UAAU,CDRoB,IAAI,CCSlC,KAAK,CDNyB,IAAI,CCOnC"
+	"mappings": "AEAA,AAAA,IAAI,CACJ,IAAI,AAAC,CACH,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACV,AAED,AAAA,IAAI,AAAC,CACH,UAAU,CDPoB,OAAO,CCQrC,KAAK,CDLyB,IAAI,CCMnC,ACRD,AAAA,IAAI,AAAC,CACH,WAAW,CFaqB,QAAQ,CEZzC"
 }
