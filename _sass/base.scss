@@ -8,3 +8,8 @@ body {
   background: $color-primary;
   color: $white;
 }
+
+img,
+svg {
+  max-width: 100%;
+}

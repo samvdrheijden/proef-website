@@ -1,0 +1,46 @@
+header#header {
+  position: sticky;
+  top: 0;
+  display: block;
+  height: auto; 
+  background: $dark-gray;
+  padding: 20px;
+
+  a.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  .menucontainer {
+    position: relative;
+    
+    nav.menu {
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      transform: translateY(-50%);
+      
+      ul {
+        text-align: right;
+        margin-bottom: 0;
+        li {
+          display: inline;
+          margin: 0 10px;
+
+          a {
+            color: $white;
+            text-decoration: none;
+            font-family: $font-family-serif;
+            font-weight: 400;
+            font-size: 1.25rem;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
