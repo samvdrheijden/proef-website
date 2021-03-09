@@ -4,6 +4,7 @@
 
 layout: page
 title: Home
+header-classes: fixed, light, transparent
 nav-menu: true
 slug: home
 robots: index, follow
