@@ -1,0 +1,3 @@
+@mixin trs($prop : all, $t : .2s, $f : ease){
+  transition: $prop $t $f;
+}

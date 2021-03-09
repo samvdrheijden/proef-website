@@ -26,7 +26,10 @@ header#header {
         margin-bottom: 0;
         li {
           display: inline;
-          margin: 0 10px;
+          
+          &:not(:last-child) {
+            margin-right: 1.875rem;
+          }
 
           a {
             color: $white;
@@ -34,6 +37,8 @@ header#header {
             font-family: $font-family-serif;
             font-weight: 400;
             font-size: 1.25rem;
+
+            @include trs();
 
             &:hover {
               color: $color-primary;
