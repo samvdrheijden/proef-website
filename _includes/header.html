@@ -1,0 +1,50 @@
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 col-3">
+        <a href="{{ "" | absolute_url }}/" class="logo">
+          <img src="{{ "images/svg/logo.svg" | relative_url }}" alt="site logo">
+        </a>
+      </div>
+
+
+      <div class="col-md-8 col-9 menucontainer">
+        <!-- Menu -->
+        <nav class="menu top-50">
+          <ul class="links">
+            {% for page in site.pages %}
+              {% if page.slug == "home" %}
+                  <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% for page in site.html_pages %}
+              {% if page.slug != "home" and page.nav-menu == true and page.is-nav-menu-child != true %}
+                  <li {% if page.nav-menu-parent == true %} class="isParent" {% endif %}>
+                    <a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+
+                    {% if page.nav-menu-parent == true %}
+
+                      <span class="toggler"></span>
+
+                      <ul class="submenu">
+                        {% for subpage in site.pages %}
+                          {% if subpage.nav-menu == true and subpage.is-nav-menu-child == true and subpage.nav-menu-parent == page.slug %}
+                            <li><a href="{{ subpage.url | absolute_url }}">{{ subpage.title }}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                  </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+</header>

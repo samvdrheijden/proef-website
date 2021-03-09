@@ -1,0 +1,116 @@
+header#header {
+  position: sticky;
+  top: 0;
+  display: block;
+  height: auto; 
+  background: $dark-gray;
+  padding: 20px;
+
+  a.logo {
+    width: 7.5rem;
+    height: auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  .menucontainer {
+    position: relative;
+    
+    nav.menu {
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      transform: translateY(-50%);
+      
+      ul {
+        text-align: right;
+        margin-bottom: 0;
+        li {
+          display: inline;
+          
+          &:not(:last-child) {
+            margin-right: 1.875rem;
+          }
+
+          a {
+            color: $white;
+            text-decoration: none;
+            font-family: $font-family-serif;
+            font-weight: 400;
+            font-size: 1.25rem;
+
+            @include trs();
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+
+          &.isParent {
+            position: relative;
+            padding-right: 30px;
+            
+            .toggler {
+              width: 20px;
+              height: 20px;
+              display: block;
+              
+              background-color: $white;
+              -webkit-mask-image: url(../images/svg/chevron-down-solid.svg);
+              mask-image: url(../images/svg/chevron-down-solid.svg);
+              -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+              
+              position: absolute; 
+              right: 0; top: 0;
+            }
+
+            &:hover {
+              .toggler {
+                background-color: $color-primary;
+              }
+            }
+
+            &:hover {
+              .submenu {
+                display: block;
+              }
+            }
+            
+            .submenu {
+              display: none;
+              text-align: left;
+              position: absolute;
+              left: 0; 
+              top: calc(100%);
+              padding: 0; 
+              padding-top: 48px;
+              margin: 0; 
+              min-width: 200px;
+
+              li {
+                display: block;
+                padding: 0; margin: 0;
+
+                &:not(:last-child){
+                  border-bottom: 1px solid $lighter-gray;
+                }
+
+                a {
+                  background: $lightest-gray;
+                  display: block;
+                  color: $dark-gray;
+                  padding: 15px 20px;
+
+                  &:hover {
+                    color: $white;
+                    background: $dark-gray;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
