@@ -14,18 +14,18 @@
   {% if site.title and page.title %}<meta name="dc.title" content="{{ site.title }} | {{ page.title }}">{% endif %}
   {% if site.description %}<meta name="dc.description" content="{{ site.description }}">{% endif %}
   {% if site.language %}<meta name="dc.language" content="{{ site.language }}">{% endif %}
-  {% if site.url %}<meta name="dc.source" content="https://{{ site.url }}">{% endif %}
-  {% if site.url and page.url %}<meta name="dc.relation" content="https://{{ site.url }}{{ page.url }}">{% endif %}
+  {% if site.url %}<meta name="dc.source" content="{{ site.url }}">{% endif %}
+  {% if site.url and page.url %}<meta name="dc.relation" content="{{ site.url }}{{ page.url }}">{% endif %}
   
-  {% if site.url %}<link rel="canonical" href="https://{{ site.url }}">{% endif %}
+  {% if site.url %}<link rel="canonical" href="{{ site.url }}">{% endif %}
   
-  {% if site.url %}<meta name="og.relation" content="https://{{ site.url }}">{% endif %}
+  {% if site.url %}<meta name="og.relation" content="{{ site.url }}">{% endif %}
   {% if site.title %}<meta name="og.site_name" content="{{ site.title }}">{% endif %}
   {% if site.language %}<meta name="og.locale" content="{{ site.language }}">{% endif %}
   {% if site.type %}<meta name="og.type" content="{{ site.type }}">{% endif %}
   {% if site.title and page.title %}<meta name="og.title" content="{{ site.title }} | {{ page.title }}">{% endif %}
   {% if site.description %}<meta name="og.description" content="{{ site.description }}">{% endif %}
-  {% if site.url and page.url %}<meta name="og.url" content="https://{{ site.url }}{{ page.url }}">{% endif %}
+  {% if site.url and page.url %}<meta name="og.url" content="{{ site.url }}{{ page.url }}">{% endif %}
 
 
   <!-- stylesheet -->
