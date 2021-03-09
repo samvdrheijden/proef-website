@@ -9,6 +9,10 @@ body {
   color: $white;
 }
 
+main {
+  min-height: 90vh;
+}
+
 img,
 svg {
   max-width: 100%;
